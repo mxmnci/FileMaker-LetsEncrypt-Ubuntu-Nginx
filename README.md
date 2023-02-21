@@ -17,14 +17,14 @@ cd ~/
 mkdir fms-ssl
 cd fms-ssl/
 ```
-#### 4. Download
+#### 4. Download & make executable
 ```
 wget https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/get-ssl.sh
 wget https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/renew-cert.sh
 wegt https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/renew-cert-at.sh
-```
-#### 5. chmod +x get-ssl.sh renew-cert.sh renew-cert-at.sh 
-#### 6. Edit content of scripts
+chmod +x get-ssl.sh renew-cert.sh renew-cert-at.sh
+``` 
+#### 5. Edit content of scripts
 ```
 nano get-ssl.sh
 ```
@@ -38,7 +38,7 @@ nano renew-cert-at.sh
 ```
 Set the time of day to schedule FileMaker Server restart when the certificate is renewed by certbot systemctl timer
 
-#### 7. Run `sudo ./get-ssl.sh` to generate the ssl certificate for the first time.
+#### 6. Run `sudo ./get-ssl.sh` to generate the ssl certificate for the first time.
 
 
 ### Renewal Setup Instructions:
