@@ -41,12 +41,12 @@ Set the time of day to schedule FileMaker Server restart when the certificate is
 sudo ./get-ssl.sh
 ```
 #### Renewal Setup Instructions:
-The certbot systemctl timer installed by certbot by default checks twice a day at a random time if the certificate needs renewal, only if the certificate is renewed will it run pre and post hooks for additional processing.
+The systemctl timer installed by certbot by default checks twice a day at a random time if the certificate needs renewal, only if the certificate is renewed will it run pre and post hooks for additional processing.
 
 Create a symbolic link to run renew-cert-at.sh as a post hook:
 ```
 ln -s ~/fms-ssl/renew-cert-at.sh /etc/letsencrypt/renewal-hooks/post/
 ```
-This insures that once the certificate is renewed by the systemctl timer, FileMaker Server will only restart the time scheduled in renew-cert-at.sh to avoid disruption of access to users at an undesired time.
+This insures that once the certificate is renewed by the systemctl timer, FileMaker Server will only restart at the time scheduled in renew-cert-at.sh to avoid disruption of access to users at an undesired time.
 
 Forked from https://github.com/jon91/FileMaker-LetsEncrypt-CentOS-7
