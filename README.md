@@ -10,7 +10,6 @@ sudo apt-get remove certbot
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
-
 ##### 3. Logged in as root:
 ```
 cd ~/
@@ -37,16 +36,14 @@ Set domain, fms admin username and password
 nano renew-cert-at.sh
 ```
 Set the time of day to schedule FileMaker Server restart when the certificate is renewed by certbot systemctl timer
-
 ##### 6. Generate the ssl certificate for the first time
 ```
 sudo ./get-ssl.sh
 ```
-
 #### Renewal Setup Instructions:
 The certbot systemctl timer installed by certbot by default checks twice a day at a random time if the certificate needs renewal, only if the certificate is renewed will it run pre and post hooks for additional processing.
 
-We will add a post hook to run renew-cert-at.sh
+Create a symbolic link to run renew-cert-at.sh as a post hook:
 ```
 ln -s ~/fms-ssl/renew-cert-at.sh /etc/letsencrypt/renewal-hooks/post/
 ```
