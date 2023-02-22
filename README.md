@@ -20,7 +20,7 @@ cd fms-ssl/
 ```
 wget https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/get-ssl.sh
 wget https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/renew-cert.sh
-wegt https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/renew-cert-at.sh
+wget https://github.com/mhtawfiq/FileMaker-LetsEncrypt-Ubuntu-Nginx/blob/main/fms-ssl/renew-cert-at.sh
 chmod +x get-ssl.sh renew-cert.sh renew-cert-at.sh
 ``` 
 ##### 5. Edit content of scripts
